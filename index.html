@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quiet virtual space to let something go.">
+  <title>Break It — A Virtual Rage Room</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="room" id="room">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Break It home"><span class="brand-mark">✳</span> BREAK IT<span class="brand-dot">.</span></a>
+      <span class="top-note">A VIRTUAL RAGE ROOM</span>
+      <button class="sound-button" id="soundButton" type="button" aria-pressed="true" aria-label="Turn sound on"><span aria-hidden="true">◖</span> SOUND OFF</button>
+    </header>
+
+    <section class="experience" aria-label="Virtual rage room">
+      <div class="intro"><p class="eyebrow"><span></span> A SPACE TO LET GO</p><h1>Leave it<br><em>in pieces.</em></h1><p>Some things are better broken.</p></div>
+      <div class="stage" id="stage">
+        <div class="stage-label"><span>THE RELEASE</span><span id="stageNumber">01 / 03</span></div>
+        <div class="spotlight"></div>
+        <div class="object-wrap" id="objectWrap" role="button" tabindex="0" aria-label="Strike the ceramic plate" aria-describedby="strikeHint">
+          <div class="object-art" id="objectArt"></div>
+        </div>
+        <div class="broken-copy" id="brokenCopy" hidden><span>✳</span><p>Take a moment.</p><h2>How do you feel now?</h2><p>Whenever you're ready, begin again.</p></div>
+        <p class="strike-hint" id="strikeHint">Click the object to strike it</p>
+        <div class="floor"></div>
+        <div class="stage-bottom"><span id="objectCaption">CERAMIC PLATE</span><span id="stateLabel" role="status" aria-live="polite">INTACT</span></div>
+      </div>
+      <aside class="controls" aria-label="Rage room controls">
+        <div class="control-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Let it out.</h2></div><span class="control-star">✳</span></div>
+        <div class="rule"></div>
+        <fieldset><legend>01 <span>Choose your object</span></legend><div class="object-options" id="objectOptions">
+          <button type="button" class="object-option active" data-object="plate" aria-pressed="true"><span class="mini mini-plate"></span><span>Plate</span></button>
+          <button type="button" class="object-option" data-object="bottle" aria-pressed="false"><span class="mini mini-bottle"></span><span>Bottle</span></button>
+          <button type="button" class="object-option" data-object="cup" aria-pressed="false"><span class="mini mini-cup"></span><span>Cup</span></button>
+        </div></fieldset>
+        <div class="field"><label for="message"><span>02</span> Put it into words <small>OPTIONAL</small></label><textarea id="message" maxlength="80" placeholder="What's weighing on you?" rows="2"></textarea><div class="privacy"><span>✳ &nbsp; Your words stay right here.</span><span id="characterCount">0 / 80</span></div></div>
+        <fieldset class="field strength-field"><legend>03 <span>Choose your impact</span></legend><div class="strength-options" id="strengthOptions" role="group" aria-label="Impact strength"><button type="button" data-strength="1" aria-pressed="false">Light</button><button type="button" data-strength="3" class="active" aria-pressed="true">Medium</button><button type="button" data-strength="5" aria-pressed="false">Heavy</button></div></fieldset>
+        <div class="control-footer"><span>HITS <strong id="hitCount">00</strong></span><button id="resetButton" type="button">↻ &nbsp; RESET</button></div>
+      </aside>
+    </section>
+    <footer class="page-footer"><span>BREAK IT / LET IT GO</span><span>A LITTLE ROOM FOR BIG FEELINGS</span><span>JUST FOR YOU ✳</span></footer>
+  </main>
+</body>
+</html>
